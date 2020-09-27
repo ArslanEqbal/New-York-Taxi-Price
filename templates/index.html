@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi price Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="myform">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>New York Taxi Price Prediction</h2>
+            <h3>No of Passengers</h3>
+            <input id="first" name="passenger_count" type="number ">
+            <h3>Distance Travelled By the Taxi</h3><br><input id="second" name="distance" required="required">
+
+            <br><br><button id="sub" type="submit ">NET CHARGE</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br>
+        <h3>{{ prediction_text }}<h3>
+    </div>
+    <footer class="myfooter">
+
+
+        Designed by Arslan Eqbal Khan
+
+
+
+    </footer>
+
+
+
+
+    <style>
+        body {
+            background: url('static/Taxi.jpg');
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 0px;
+            font-family: 'Courier Prime', monospace;
+            color: whitesmoke;
+
+        }
+
+        #myform {
+
+            position: absolute;
+            right: 180px;
+            top: 120px;
+
+
+
+        }
+
+
+        #sub {
+            width: 170px;
+            height: 30px;
+            text-align: center;
+            border-radius: 8px;
+
+        }
+
+        #sub:hover {
+            background-color: rgb(2, 10, 10);
+        }
+
+        #first {
+            border-radius: 8px;
+            height: 25px;
+
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 8px;
+            height: 25px;
+
+            text-align: center;
+        }
+
+        .myfooter {
+
+            text-align: center;
+            position: absolute;
+            right: 300px;
+            top: 700px;
+            color: black;
+        }
+    </style>
+</body>
+
+</html>
